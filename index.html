@@ -25,9 +25,9 @@
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Extras</a></li>
-                        <li><a href="#">Media</a></li>
+                        <li><a class="js-subnav" href="#">Merchandise</a></li>
+                        <li><a class="js-subnav" href="#">Extras</a></li>
+                        <li><a class="js-subnav" href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -47,15 +47,39 @@
         </div>
         
         <div id="slider">
-            <div class="text-content">
-                <h2 class="text-heading">
-                    Sterns;Gate Movie
-                </h2>
-                <div class="text-description">
-                    Nice confession appeared after the stories.
+            <div class="slider-container slider1">
+                <div class="text-content">
+                    <h2 class="text-heading">
+                        Sterns;Gate Movie
+                    </h2>
+                    <div class="text-description">
+                        Nice confession appeared after the stories.
+                    </div>
+                </div>
+            </div>
+            <div class="slider-container slider2">
+                <div class="text-content">
+                    <h2 class="text-heading">
+                        Sterns;Gate Visual Novel
+                    </h2>
+                    <div class="text-description">
+                        Sweetest kiss ever.
+                    </div>
+                </div>
+            </div>
+            <div class="slider-container slider3">
+                <div class="text-content">
+                    <h2 class="text-heading">
+                        Sterns;Gate Anime
+                    </h2>
+                    <div class="text-description">
+                        Brain blowing and heart breaking.
+                    </div>
                 </div>
             </div>
         </div>
+
+
         <!-- About section -->
         <div id="content">
             <div id="band" class="content-section">
@@ -81,15 +105,15 @@
                     also features hard science fiction elements.
                 </p>
                 <div class="row characters-list">
-                    <div class="col col-third character-item">
+                    <div class="col col-third character-item mobile-member">
                         <p class="character-name">Okabe</p>
                         <img src="/assets/img/team/Okabe.jpg" alt="Okabe Rintarou" class="character-avatar">
                     </div>
-                    <div class="col col-third character-item">
+                    <div class="col col-third character-item mobile-member">
                         <p class="character-name">Kurisu</p>
                         <img src="/assets/img/team/Kurisu.jpg" alt="Makise Kurisu" class="character-avatar">
                     </div>
-                    <div class="col col-third character-item">
+                    <div class="col col-third character-item mobile-member">
                         <p class="character-name">Mayuri</p>
                         <img src="/assets/img/team/Mayuri.jpg" alt="Shinna Mayuri" class="character-avatar">
                     </div>
@@ -115,16 +139,16 @@
 
                     <!-- Places -->
                     <div class="row places-list">
-                        <div class="col col-third">
+                        <div class="col col-third mobile-tour">
                             <img src="/assets/img/places/station.jpg" alt="The Station" class="place-image">
                             <div class="place-body">
                                 <h3 class="place-heading">The Station</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
-                                <p class="place-description">This is the place where Okarin and Kurisu bump into each other at the end of Steins;Gate.</p>
+                                <p class="place-description">This is where Okarin and Kurisu bump into each other at the end of Steins;Gate.</p>
                                 <button href="#" class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third mobile-tour">
                             <img src="/assets/img/places/stair.jpg" alt="The Stair" class="place-image">
                             <div class="place-body">
                                 <h3 class="place-heading">The Stair</h3>
@@ -133,7 +157,7 @@
                                 <button href="#" class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third mobile-tour">
                             <img src="/assets/img/places/restaurant.jpg" alt="The Restaurant" class="place-image">
                             <div class="place-body">
                                 <h3 class="place-heading">Beef Bowl Restaurant</h3>
@@ -156,18 +180,18 @@
                     Sterner? Drop a note!      
                 </p>
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half contact-info mobile-contact">
                         <p><i class="contact-icon ti-location-pin"></i>Akihabara, Japan</p>
-                        <p><i class="contact-icon ti-mobile"></i>Phone: +00 151515</p>
-                        <p><i class="contact-icon ti-email"></i>Email: kurisu@gmail.com</p>
+                        <p><i class="contact-icon ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
+                        <p><i class="contact-icon ti-email"></i>Email: <a href="mailto:kurisu@gmail.com">kurisu@gmail.com</a> </p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col col-half contact-form mobile-contact">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col col-half mobile-form">
                                     <input type="text" name="" required id=""  placeholder="Name" class="form-control">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col col-half mobile-form mt8">
                                     <input type="email" name="" required id=""  placeholder="Email" class="form-control">
                                 </div>
                                 <div class="clear"></div>
@@ -180,6 +204,7 @@
                             <input class="submit-form" type="submit" value="SEND">
                         </form>
                     </div>
+                    <div class="clear"></div>
                 </div>
             </div>
             
@@ -266,16 +291,68 @@
                 header.style.height = null;
             })
         }
+        
+        //Khi ấn vào subnav thì ẩn nav
+        var subNavs = document.querySelectorAll('.js-subnav');
+
+        for(subNav of subNavs)
+        {
+            subNav.onclick = function (event) {
+                header.style.height = null;
+                //event.preventDefault();
+            }
+        }
 
         // Chống trôi khi nhấn vào more
         var moreNav = document.getElementById('js-nav-more')
-        var isOpenSubnav = false;
+        var isCloseSubnav = true;
 
         moreNav.onclick = function (event) {
+            for(subNav of subNavs)
+            {
+                if(isCloseSubnav)
+                {
+                    subNav.style.position = 'initial';
+                }
+                else subNav.style.position = 'absolute';
+            }
+            isCloseSubnav = !isCloseSubnav;
             event.preventDefault();
         }
 
+        // Slider movement
+        // var currentIndex = 0;
+        // var sliderContainers = document.getElementsByClassName('slider-container')
+        // carousel();
 
+        // function carousel() {
+        //     for(sliderContainer of sliderContainers)
+        //     {
+        //         sliderContainer.style.display = 'none';
+        //     }
+        //     currentIndex = (currentIndex++) % sliderContainers.length;
+        //     (sliderContainers[currentIndex - 1]).style.display = 'block';  
+        //     console.log('timer đang chạy')
+        //     setTimeout(carousel, 4000);    
+        // }
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName('slider-container');
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000);    
+        }
+
+
+
+        
     </script>
 
 
