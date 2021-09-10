@@ -157,7 +157,7 @@ html{
     margin-top: 46px;
     color: black;
     background-color: #f44336;
-    
+    text-shadow: 0 0 3px #000;
 }
 
 #slider .text-content{
